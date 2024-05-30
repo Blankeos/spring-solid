@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+* {
+  font-family: "Manrope";
+}
+body {
+  font-family: "Manrope", sans-serif;
+  background-color: #111827;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  gap: 30px;
+}
+
+.container-buttons {
+  display: flex;
+  gap: 12px;
+  padding: 10px;
+}
+
+.container-buttons button {
+  border-radius: 5px;
+  border: 0px;
+  font-size: 1.2rem;
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  background-color: #a3e635;
+  color: #111827;
+}
+
+.example-progress {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  p {
+    color: white;
+  }
+}
+
+progress {
+  color: #a3e635;
+}
+progress::-moz-progress-bar {
+  background: #a3e635;
+}
+progress::-moz-progress-bar {
+  background: #a3e635;
+}
+
+/*  */
+
+.example-circular {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+
+  span {
+    color: white;
+  }
+}
+
+.circular-progress {
+  --size: 250px;
+  --half-size: calc(var(--size) / 2);
+  --stroke-width: 20px;
+  --radius: calc((var(--size) - var(--stroke-width)) / 2);
+  --circumference: calc(var(--radius) * pi * 2);
+  --dash: calc((var(--progress) * var(--circumference)) / 100);
+  animation: progress-animation 5s linear 0s 1 forwards;
+}
+
+.circular-progress circle {
+  cx: var(--half-size);
+  cy: var(--half-size);
+  r: var(--radius);
+  stroke-width: var(--stroke-width);
+  fill: none;
+  stroke-linecap: round;
+}
+
+.circular-progress circle.bg {
+  stroke: #ddd;
+}
+
+.circular-progress circle.fg {
+  transform: rotate(-90deg);
+  transform-origin: var(--half-size) var(--half-size);
+  stroke-dasharray: var(--dash) calc(var(--circumference) - var(--dash));
+  transition: stroke-dasharray 0.3s linear 0s;
+  stroke: #a3e635;
+}
+
+@property --progress {
+  syntax: "<number>";
+  inherits: false;
+  initial-value: 0;
+}
+/*  */
+
+.example-xy {
+  background: #a3e635;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #111827;
+  font-size: 0.8rem;
+}

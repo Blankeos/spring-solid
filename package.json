@@ -1,6 +1,6 @@
 {
   "name": "spring-solid",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "createSpring primitive for SolidJS. Inspired by Svelte.",
   "license": "MIT",
   "author": "Carlo Taleon <carloantonioct@gmail.com>",

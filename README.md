@@ -2,13 +2,13 @@
   <img width="100%" src="https://assets.solidjs.com/banner?type=Primitives&background=tiles&project=spring" alt="Solid Primitives spring">
 </p>
 
-# @solid-primitives/spring
+# spring-solid
 
 https://github.com/solidjs-community/solid-primitives/assets/38070918/7c4fa01f-7959-4a67-9588-e28448f7f20d
 
 [![turborepo](https://img.shields.io/badge/built%20with-turborepo-cc00ff.svg?style=for-the-badge&logo=turborepo)](https://turborepo.org/)
-[![size](https://img.shields.io/bundlephobia/minzip/@solid-primitives/spring?style=for-the-badge&label=size)](https://bundlephobia.com/package/@solid-primitives/spring)
-[![version](https://img.shields.io/npm/v/@solid-primitives/spring?style=for-the-badge)](https://www.npmjs.com/package/@solid-primitives/spring)
+[![size](https://img.shields.io/bundlephobia/minzip/spring-solid?style=for-the-badge&label=size)](https://bundlephobia.com/package/spring-solid)
+[![version](https://img.shields.io/npm/v/spring-solid?style=for-the-badge)](https://www.npmjs.com/package/spring-solid)
 [![stage](https://img.shields.io/endpoint?style=for-the-badge&url=https%3A%2F%2Fraw.githubusercontent.com%2Fsolidjs-community%2Fsolid-primitives%2Fmain%2Fassets%2Fbadges%2Fstage-0.json)](https://github.com/solidjs-community/solid-primitives#contribution-process)
 
 A small SolidJS hook to interpolate signal changes with spring physics. Inspired by & directly forked from [`svelte-motion/spring`](https://svelte.dev/docs/svelte-motion#spring) as such, has a very familiar API design.
@@ -63,3 +63,6 @@ const springedValue = createDerivedSpring(myNumber, { stiffness: 0.03 });
 ## Changelog
 
 See [CHANGELOG.md](./CHANGELOG.md)
+
+> [!NOTE]
+> Since [my PR for solid-primitives](github.com/solidjs-community/solid-primitives/pull/629) might not get reviewed, I'm self-releasing this port on my own. Ideally this would become `@solid-primitives/spring`. Hope you like it anyway!

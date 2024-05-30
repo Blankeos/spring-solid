@@ -4,6 +4,8 @@
 
 # @solid-primitives/spring
 
+https://github.com/solidjs-community/solid-primitives/assets/38070918/7c4fa01f-7959-4a67-9588-e28448f7f20d
+
 [![turborepo](https://img.shields.io/badge/built%20with-turborepo-cc00ff.svg?style=for-the-badge&logo=turborepo)](https://turborepo.org/)
 [![size](https://img.shields.io/bundlephobia/minzip/@solid-primitives/spring?style=for-the-badge&label=size)](https://bundlephobia.com/package/@solid-primitives/spring)
 [![version](https://img.shields.io/npm/v/@solid-primitives/spring?style=for-the-badge)](https://www.npmjs.com/package/@solid-primitives/spring)
@@ -38,20 +40,20 @@ bun add spring-solid
 
 ```ts
 // Basic Example
-const [progress, setProgress] = createSpring(0)
+const [progress, setProgress] = createSpring(0);
 
 // Example with options (less sudden movement)
-const [radialProgress, setRadialProgress] = createSpring(0, { stiffness: 0.05 })
+const [radialProgress, setRadialProgress] = createSpring(0, { stiffness: 0.05 });
 
 // Example with collections (e.g. Object or Array).
 const [xy, setXY] = createSpring(
   { x: 50, y: 50 },
   { stiffness: 0.08, damping: 0.2, precision: 0.01 },
-)
+);
 
 // Example deriving from an existing signal.
-const [myNumber, myNumber] = createSignal(20)
-const springedValue = createDerivedSpring(myNumber, { stiffness: 0.03 })
+const [myNumber, myNumber] = createSignal(20);
+const springedValue = createDerivedSpring(myNumber, { stiffness: 0.03 });
 ```
 
 ## Demo

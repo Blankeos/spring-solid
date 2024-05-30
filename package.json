@@ -1,17 +1,17 @@
 {
-  "name": "{{name_of_lib}}",
+  "name": "spring-solid",
   "version": "0.0.0",
-  "description": "{{desc_of_lib}}",
+  "description": "createSpring primitive for SolidJS. Inspired by Svelte.",
   "license": "MIT",
-  "author": "{{me}}",
+  "author": "Carlo Taleon <carloantonioct@gmail.com>",
   "contributors": [],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/{{me}}/{{name_of_lib}}.git"
+    "url": "git+https://github.com/blankeos/spring-solid.git"
   },
-  "homepage": "https://github.com/{{me}}/{{name_of_lib}}#readme",
+  "homepage": "https://github.com/blankeos/spring-solid#readme",
   "bugs": {
-    "url": "https://github.com/{{me}}/{{name_of_lib}}/issues"
+    "url": "https://github.com/blankeos/spring-solid/issues"
   },
   "files": [
     "dist"
@@ -77,7 +77,12 @@
     "vitest": "^1.6.0"
   },
   "keywords": [
-    "solid"
+    "solid",
+    "animate",
+    "tween",
+    "spring",
+    "solid",
+    "primitives"
   ],
   "packageManager": "pnpm@9.1.1",
   "engines": {

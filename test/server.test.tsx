@@ -1,30 +1,18 @@
-import { describe, expect, it } from 'vitest'
-import { isServer, renderToString } from 'solid-js/web'
-import { Hello, createHello } from '../src'
+import { describe, test, expect } from "vitest";
+import { createDerivedSpring, createSpring } from "../src/index.js";
+import { createSignal } from "solid-js";
 
-describe('environment', () => {
-  it('runs on server', () => {
-    expect(typeof window).toBe('undefined')
-    expect(isServer).toBe(true)
-  })
-})
+describe("createSpring", () => {
+  test("doesn't break in SSR", () => {
+    const [value, setValue] = createSpring({ progress: 0 });
+    expect(value().progress, "initial value should be { progress: 0 }").toBe(0);
+  });
+});
 
-describe('createHello', () => {
-  it('Returns a Hello World signal', () => {
-    const [hello] = createHello()
-    expect(hello()).toBe('Hello World!')
-  })
-
-  it('Changes the hello target', () => {
-    const [hello, setHello] = createHello()
-    setHello('Solid')
-    expect(hello()).toBe('Hello Solid!')
-  })
-})
-
-describe('Hello', () => {
-  it('renders a hello component', () => {
-    const string = renderToString(() => <Hello />)
-    expect(string).toBe('<div>Hello World!</div>')
-  })
-})
+describe("createDerivedSpring", () => {
+  test("doesn't break in SSR", () => {
+    const [signal, setSignal] = createSignal({ progress: 0 });
+    const value = createDerivedSpring(signal);
+    expect(value().progress, "initial value should be { progress: 0 }").toBe(0);
+  });
+});
